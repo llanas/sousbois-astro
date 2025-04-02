@@ -25,3 +25,16 @@ h6 {
     margin: 0;
     padding: 0;
 }
+
+@theme {
+    --color-dark: #2b2f2d;
+    --color-bright: #e6e6e6;
+    --color-primary: #6b848d;
+    --color-secondary: #ece5d3;
+    --color-deepBlue: #283f48;
+
+    --screens-sm: 640px;
+    --screens-md: 768px;
+    --screens-lg: 1024px;
+    --screens-xl: 1280px;
+}
