@@ -1,32 +1,13 @@
 @import "tailwindcss";
 
 @font-face {
-    font-family: "SilkaMona";
-    src: url("/fonts/SilkaMono-Regular.otf") format("otf");
-}
-
-html,
-body {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "SilkaMona", sans-serif;
-    font-weight: 400;
-    scroll-behavior: smooth;
-}
-
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin: 0;
-    padding: 0;
+    font-family: "silka-mono";
+    src: url("/fonts/SilkaMono-Regular.otf") format("opentype");
 }
 
 @theme {
+    --font-primary: "silka-mono", sans-serif;
+
     --color-dark: #2b2f2d;
     --color-bright: #e6e6e6;
     --color-primary: #6b848d;
@@ -37,4 +18,15 @@ h6 {
     --screens-md: 768px;
     --screens-lg: 1024px;
     --screens-xl: 1280px;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font-primary);
+    font-weight: 400;
+    scroll-behavior: smooth;
+    @apply text-deepBlue bg-secondary dark:bg-primary dark:text-bright;
 }
