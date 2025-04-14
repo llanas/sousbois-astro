@@ -1,4 +1,5 @@
 ---
+import HomeNavbar from "@/components/home-navbar.astro";
 import CommonHeader from "../components/commons/common-header.astro";
 ---
 
@@ -12,7 +13,8 @@ import CommonHeader from "../components/commons/common-header.astro";
     <title>Sous-bois Architecture</title>
     <CommonHeader />
   </head>
-  <body class="h-screen">
+  <body class="min-h-screen">
+    <HomeNavbar />
     <slot />
   </body>
 </html>
