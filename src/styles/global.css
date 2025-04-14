@@ -2,11 +2,33 @@
 
 @font-face {
     font-family: "silka-mono";
-    src: url("/fonts/SilkaMono-Regular.otf") format("opentype");
+    src: url("/fonts/silka-mono/SilkaMono-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "prometo";
+    src: url("/fonts/prometo/Prometo_Trial_Md.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "montserrat";
+    src: url("/fonts/montserrat/Montserrat-Medium.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "montserrat";
+    src: url("/fonts/montserrat/Montserrat-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
 }
 
 @theme {
     --font-primary: "silka-mono", sans-serif;
+    --font-secondary: "prometo", sans-serif;
+    --font-tertiary: "montserrat", sans-serif;
 
     --color-dark: #2b2f2d;
     --color-bright: #e6e6e6;
