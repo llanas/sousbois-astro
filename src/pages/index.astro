@@ -1,32 +1,179 @@
 ---
 import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
-import CommonSvg from "@components/commons/common-svg.astro";
 import SousBoisLogo from "@assets/svg/sous-bois-logo.svg?raw";
 import SymboleLogo from "@assets/logos/symbole.png";
+import WoodBackgroundImage from "@assets/images/wood-background.jpg";
+import SeparatorWoodImage from "@assets/images/separator_wood.jpg";
+import WolVoletsImage from "@assets/images/sol_volets.png";
+import Post1Image from "@assets/images/posts/post_1.png";
+import Post2Image from "@assets/images/posts/post_2.png";
+import Post3Image from "@assets/images/posts/post_3.png";
+import CercleImage from "@assets/images/cercle.png";
+import CommonButton from "@/components/commons/common-button.astro";
+import CommonSvg from "@/components/commons/common-svg.astro";
 ---
 
 <Layout>
   <section
-    class="max-w-screen-md mx-auto h-screen flex flex-col sm:flex-row justify-evenly items-center"
+    class="h-screen max-w-screen-xl mx-auto pt-32 flex flex-col sm:flex-row justify-evenly items-center"
   >
-    <article class="place-items-center text-center p-8">
-      <CommonSvg
-        raw={SousBoisLogo}
-        class="h-16 fill-deepBlue dark:fill-bright mb-16"
-      />
-      <h1 class="uppercase text-lg text-center font-primary mb-4">
-        Site en construction
-      </h1>
-      <div class="border-primary dark:bg-bright w-24 h-[1px] mb-4 rounded-full">
-      </div>
-      <a
-        class="font-secondary text-secondary text-sm hover:text-deepBlue underline"
-        href="mailto:lbonnevie@sous-bois.fr">lbonnevie@sous-bois.fr</a
+    <article class="px-16 w-1/2">
+      <h3
+        class="uppercase text-4xl font-primary text-deepBlue tracking-widest mb-6"
       >
+        Quand innovation et savoir-faire dessinent un avenir bas carbone.
+      </h3>
+      <p class="mb-6">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam nesciunt
+        dolorum enim quibusdam consequatur numquam ducimus sunt, voluptate
+        exercitationem optio, aperiam unde quam veritatis corporis eligendi,
+        perferendis illo eum tenetur.
+      </p>
+      <div class="my-12">
+        <CommonButton label="à propos" />
+      </div>
+      <div class="flex flex-row gap-2">
+        <div class="size-3 cursor-pointer bg-bright rounded-full"></div>
+        <div class="size-3 cursor-pointer bg-deepBlue rounded-full"></div>
+        <div class="size-3 cursor-pointer bg-deepBlue rounded-full"></div>
+        <div class="size-3 cursor-pointer bg-deepBlue rounded-full"></div>
+      </div>
     </article>
-    <div class="flex flex-col items-center justify-center px-16">
-      <Image src={SymboleLogo} alt="Sous-boie logo" class="object-cover w-56" />
+    <div class="w-1/2 p-24">
+      <Image
+        src={SymboleLogo}
+        alt="Sous-boie logo"
+        class="object-cover w-full"
+      />
     </div>
   </section>
+  <section
+    class="bg-deepBlue bg-cover bg-center overflow-none flex h-full items-center justify-center"
+  >
+    <Image
+      src={WoodBackgroundImage}
+      sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${WoodBackgroundImage.width}px`}
+      alt="Sous-bois logo"
+      class="w-1/2 overflow-none object-contain"
+    />
+    <div class="w-1/2 h-full flex justify-center">
+      <article class="bg-white p-24 shadow-lg m-16 -translate-x-1/3 max-w-sm">
+        <h3
+          class="uppercase text-xl font-primary text-deepBlue tracking-widest mb-6"
+        >
+          | L'innovation architectural.
+        </h3>
+        <p class="text-primary mb-6">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aliquam
+          nesciunt illo corrupti quos voluptatibus, earum impedit architecto rem
+          inventore obcaecati numquam et commodi unde quasi, voluptatem,
+          voluptates dolor? Assumenda.
+          <br />
+          <br />
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aliquam
+          nesciunt illo corrupti quos voluptatibus, earum impedit architecto rem
+          inventore obcaecati numquam et commodi unde quasi, voluptatem, voluptates
+          dolor? Assumenda.
+        </p>
+        <div class="w-full flex items-center justify-center mt-32">
+          <CommonSvg
+            raw={SousBoisLogo}
+            class="h-16 fill-deepBlue dark:fill-primary"
+          />
+        </div>
+      </article>
+    </div>
+  </section>
+  <!-- <Image src={SeparatorWoodImage} alt="Image de séparation en bois" /> -->
+  <section class="">
+    <div class="relative object-cover">
+      <Image
+        src={WolVoletsImage}
+        alt="Image de sol et volets architecturaux"
+        class=""
+      />
+      <div class="absolute bottom-0 left-0 w-full">
+        <div
+          class="max-w-screen-xl mx-auto px-16 py-8 flex flex-row justify-start items-center gap-8"
+        >
+          <CommonSvg raw={SousBoisLogo} class="h-16 fill-primary" />
+          <div class="bg-primary w-72 h-[0.5px]"></div>
+          <span class="uppercase font-primary text-primary text-sm"
+            >Architecture passive bas carbone & BIM</span
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="w-full bg-bright">
+    <article
+      class="max-w-screen-xl mx-auto px-16 py-32 flex flex-row gap-16 h-full font-tertiary"
+    >
+      <div>
+        <Image
+          src={Post1Image}
+          alt="Image de séparation en bois"
+          class="shadow-xl"
+        />
+      </div>
+      <div>
+        <Image
+          src={Post2Image}
+          alt="Image de séparation en bois"
+          class="shadow-xl"
+        />
+      </div>
+      <div>
+        <Image
+          src={Post3Image}
+          alt="Image de séparation en bois"
+          class="shadow-xl"
+        />
+      </div>
+    </article>
+  </section>
+  <footer class="w-full h-sm relative text-primary bg-deepBlue">
+    <div class="absolute">
+      <Image
+        src={CercleImage}
+        alt="Image de cercle"
+        class="absolute top-0 left-0 w-full h-full object-cover"
+      />
+    </div>
+    <div
+      class="max-w-screen-xl mx-auto px-16 py-32 flex flex-col gap-8 h-full font-tertiary"
+    >
+      <div class="flex flex-row justify-between h-full">
+        <div class="flex flex-col gap-4 justify-start items-start">
+          <div class="h-[0.5px] w-28 bg-bright mb-4"></div>
+          <span class="hover:text-bright cursor-pointer">Mentions légales</span>
+          <span class="hover:text-bright cursor-pointer"
+            >Informations footer</span
+          >
+          <span class="hover:text-bright cursor-pointer"
+            >Informations footer</span
+          >
+          <span class="hover:text-bright cursor-pointer"
+            >Informations footer</span
+          >
+          <span class="hover:text-bright cursor-pointer"
+            >Informations footer</span
+          >
+        </div>
+        <div>
+          <Image
+            src={CercleImage}
+            alt="Image de cercle"
+            class="h-full object-contain"
+          />
+        </div>
+        <span
+          style="writing-mode: vertical-rl"
+          class="rotate-180 font-primary text-sm uppercase text-primary"
+          >Architecture passive bas carbone & BIM</span
+        >
+      </div>
+    </div>
+  </footer>
 </Layout>

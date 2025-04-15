@@ -18,5 +18,17 @@ import IndexNavbar from "@/components/index-navbar.astro";
     <slot />
   </body>
 </html>
-
-<style></style>
+<script is:inline>
+  var prevScrollpos = window.scrollY;
+  window.addEventListener("scroll", () => {
+    /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+    var currentScrollPos = window.scrollY;
+    if (prevScrollpos > currentScrollPos) {
+      document.getElementById("header").style.top = "0";
+    } else {
+      document.getElementById("header").style.top = "-120px";
+    }
+    prevScrollpos = currentScrollPos;
+    hasBeenScrolled = true;
+  });
+</script>

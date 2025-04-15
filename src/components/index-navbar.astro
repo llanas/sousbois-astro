@@ -25,7 +25,7 @@ const links = [
   id="header"
   class="w-full fixed z-20 transition-all duration-300 text-bright font-secondary"
 >
-  <div class="max-w-screen-xl mx-auto p-8">
+  <div class="max-w-screen-xl mx-auto px-16 py-8">
     <div
       class="flex flex-col lg:flex-row w-full justify-between items-center relative"
     >
@@ -101,7 +101,7 @@ const links = [
       el.classList.toggle("opacity-100", isOverlayed);
       el.classList.toggle("opacity-0", !isOverlayed);
     });
-    header.classList.toggle("bg-dark", isOverlayed);
+    header.classList.toggle("bg-primary", isOverlayed);
     header.classList.toggle("shadow-lg", isOverlayed);
     header.classList.toggle("bg-transparent", !isOverlayed);
   };

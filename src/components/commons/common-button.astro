@@ -1,0 +1,34 @@
+---
+import * as uuid from "uuid";
+type Props = {
+  onClick?: () => void;
+  label?: string;
+};
+
+const { label, onClick } = Astro.props;
+const id = uuid.v4();
+---
+
+<button
+  id={id}
+  data-button={id}
+  class="flex items-center justify-center px-14 py-2 text-base border border-bright font-secondary rounded-full"
+>
+  <slot name="icon" />
+  <span>{label}</span>
+</button>
+
+<script is:inline define:vars={{ id }}>
+  const button = document.querySelector(`[data-button='${id}']`);
+  console.log(button);
+  if (button) {
+    button.addEventListener("click", () => {
+      console.log("clicked");
+      console.log(Astro.props.label);
+      console.log(Astro.props.onClick);
+      if (Astro.props.onClick) {
+        Astro.props.onClick();
+      }
+    });
+  }
+</script>
